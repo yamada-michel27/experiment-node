@@ -15,7 +15,9 @@ const server = createServer((req, res) => {
     res.end(html);
 });
 
-server.listen(3000, () => {
-    console.log("Server is running!");
+const port = process.env.PORT || 3000;
+
+server.listen(port, () => {
+    console.log(`Server is running on port ${port}!`);
 })
 
